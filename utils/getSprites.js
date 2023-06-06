@@ -13,6 +13,7 @@ const options = {
 
 function useSprites() {
     const [sprites, setSprites] = useState([]);
+    const nameAndSprite = [];
 
     useEffect(() => {
         const promises = [];
@@ -25,7 +26,13 @@ function useSprites() {
         Promise.all(promises)
             .then((data) => {
                 const newSprites = data.map((item) => item.sprites.front_default);
-                setSprites(newSprites);
+                const newNamesAndSprites = data.map((item) => {
+                    return {
+                        name: item.name,
+                        sprite: item.sprites.front_default
+                    }
+                });
+                setSprites(newNamesAndSprites);
             })
             .catch((err) => console.error(err));
     }, []);
@@ -39,7 +46,7 @@ export default function getSprites() {
     return (
         <div>
             {sprites.map((sprite) => (
-                <img key={sprite} src={sprite} alt="Front default sprite" />
+                <img key={sprite.name} src={sprite.sprite} alt="Front default sprite" />
             ))}
         </div>
     );
