@@ -46,7 +46,10 @@ export default function getSprites() {
     return (
         <div>
             {sprites.map((sprite) => (
-                <img key={sprite.name} src={sprite.sprite} alt="Front default sprite" />
+                <div key={sprite.name}>
+                    <img src={sprite.sprite} alt={sprite.name}/>
+                    <p>{sprite.name}</p>
+                </div>
             ))}
         </div>
     );
