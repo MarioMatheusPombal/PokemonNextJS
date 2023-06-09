@@ -52,7 +52,7 @@ export default function getSprites() {
         <div className={'pokemons'}>
             {sprites.map((sprite) => (
                 <div key={sprite.name} className={'cardpokemon'}>
-                    {number++}
+                    {++number}
                     <img src={sprite.sprite} alt={sprite.name} className={'img'}/>
                     <p className={'p'}>{sprite.name}</p>
                     <div className={'divcenter'}>
