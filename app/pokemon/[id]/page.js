@@ -41,6 +41,14 @@ export default function Page({params}) {
                         ))}
                     </ul>
                 </div>
+                <div className={'moves'}>
+                    <h2>Moves</h2>
+                    <ul className={'ul'}>
+                        {pokemon?.moves.map((move) => (
+                            <li key={move.move.name} className={'p'}>{move.move.name}</li>
+                        ))}
+                    </ul>
+                </div>
             </div>
         </div>
     )
