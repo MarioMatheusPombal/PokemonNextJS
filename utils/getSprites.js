@@ -54,7 +54,7 @@ export default function getSprites() {
                 <div key={sprite.name} className={'cardpokemon'}>
                     {++number}
                     <img src={sprite.sprite} alt={sprite.name} className={'img'}/>
-                    <p className={'p'}>{sprite.name}</p>
+                    <p className={'p'}>{(sprite.name).toUpperCase()}</p>
                     <div className={'divcenter'}>
                         <button className={'button'}>
                             <Link href={`/pokemon/${number}`}>Ver mais</Link>

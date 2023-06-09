@@ -167,3 +167,16 @@ a {
   justify-content: center;
   align-items: center;
 }
+
+.types {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.h1 {
+  margin: 1rem;
+  font-size: 2rem;
+  text-align: center;
+}

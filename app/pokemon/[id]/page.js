@@ -21,8 +21,16 @@ export default function Page({params}) {
     return (
         <div className={'page'}>
             <div className={'pagelist'}>
-                <h1>{pokemon?.name}</h1>
+                <h1 className={'h1'}>{(pokemon?.name)}</h1>
                 <img src={pokemon?.sprites.front_default} alt={pokemon?.name} className={'img'}/>
+                <div className={'types'}>
+                    <h2>Types</h2>
+                    <ul className={'ul'}>
+                        {pokemon?.types.map((type) => (
+                            <li key={type.type.name} className={'p'}>{type.type.name}</li>
+                        ))}
+                    </ul>
+                </div>
                 <div className={'stats'}>
                     <h2>Stats</h2>
                     <ul className={'ul'}>
