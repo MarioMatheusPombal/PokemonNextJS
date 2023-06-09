@@ -1,5 +1,8 @@
 "use client"
 import React, {useEffect, useState} from "react";
+import {redirect} from "next/navigation";
+import './getSprites.scss';
+import Link from "next/link";
 
 const num = 151;
 const baseURL = `https://pokeapi.co/api/v2/pokemon/${num}`;
@@ -40,15 +43,21 @@ function useSprites() {
     return sprites;
 }
 
+
 export default function getSprites() {
     const sprites = useSprites();
+    let number = 0;
 
     return (
-        <div>
+        <div className={'pokemons'}>
             {sprites.map((sprite) => (
-                <div key={sprite.name}>
-                    <img src={sprite.sprite} alt={sprite.name}/>
-                    <p>{sprite.name}</p>
+                <div key={sprite.name} className={'cardpokemon'}>
+                    {number++}
+                    <img src={sprite.sprite} alt={sprite.name} className={'img'}/>
+                    <p className={'p'}>{sprite.name}</p>
+                    <button className={'button'}>
+                        <Link href={`/pokemon/${number}`}>Ver mais</Link>
+                    </button>
                 </div>
             ))}
         </div>

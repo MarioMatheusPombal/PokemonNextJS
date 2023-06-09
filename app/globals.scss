@@ -105,3 +105,16 @@ a {
     color-scheme: dark;
   }
 }
+.page {
+  display: flex;
+  flex-direction: column;
+  //justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 1.5rem;
+}
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
