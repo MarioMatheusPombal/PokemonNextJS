@@ -1,7 +1,5 @@
-import GetSprites from '../utils/getSprites'
-import globals from "./globals.scss";
-import Card from "@/utils/Card";
 import ContainerFluidExample from "@/utils/Card";
+import './globals.scss';
 
 export default function Home() {
     return (
@@ -11,7 +9,7 @@ export default function Home() {
                     <h1>Pokédex</h1>
                 </div>
                 <div>
-                    <ContainerFluidExample />
+                    <ContainerFluidExample/>
                 </div>
             </div>
         </section>
