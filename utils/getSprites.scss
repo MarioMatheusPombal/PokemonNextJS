@@ -6,7 +6,7 @@
     margin: 0.2rem;
 }
 .cardpokemon{
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     display: flex;
     padding: 0.2rem;
@@ -32,4 +32,7 @@
 .link{
     text-decoration: blue;
     color: darkviolet;
+}
+.divcenter{
+    padding: 0.2rem;
 }

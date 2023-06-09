@@ -55,9 +55,11 @@ export default function getSprites() {
                     {number++}
                     <img src={sprite.sprite} alt={sprite.name} className={'img'}/>
                     <p className={'p'}>{sprite.name}</p>
-                    <button className={'button'}>
-                        <Link href={`/pokemon/${number}`}>Ver mais</Link>
-                    </button>
+                    <div className={'divcenter'}>
+                        <button className={'button'}>
+                            <Link href={`/pokemon/${number}`}>Ver mais</Link>
+                        </button>
+                    </div>
                 </div>
             ))}
         </div>
