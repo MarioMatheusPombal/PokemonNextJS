@@ -4,15 +4,6 @@ import {redirect} from "next/navigation";
 import './getSprites.scss';
 import Link from "next/link";
 
-const num = 151;
-const baseURL = `https://pokeapi.co/api/v2/pokemon/${num}`;
-const options = {
-    method: "GET",
-    headers: {
-        "Content-Type": "application/json",
-    }
-}
-
 
 function useSprites() {
     const [sprites, setSprites] = useState([]);
@@ -57,7 +48,7 @@ export default function getSprites() {
                     <p className={'p'}>{(sprite.name).toUpperCase()}</p>
                     <div className={'divcenter'}>
                         <button className={'button'}>
-                            <Link href={`/pokemon/${number}`}>Ver mais</Link>
+                            <Link href={`/pokemon/${number}`} className={'link'}>Ver mais</Link>
                         </button>
                     </div>
                 </div>
